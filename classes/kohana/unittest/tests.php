@@ -112,8 +112,9 @@ class Kohana_Unittest_Tests {
 		{
 			if (is_array($file))
 			{
-				if ($path != 'tests/test_data')
+				if ($path != 'tests'.DIRECTORY_SEPARATOR.'test_data')
 				{
+					print_r("$path-$file\r\n");
 					self::addTests($suite, $file);
 				}
 			}
